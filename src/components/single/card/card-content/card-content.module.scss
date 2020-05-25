@@ -1,0 +1,108 @@
+.content {
+    font-family: ClanOffcNews;
+    font-size: 10px;
+    color: $dark-grey;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    line-height: 2.5;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_yellow, .content_palegreen, .content_purple {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    margin:5px auto;
+    font-family: ClanOffcNews;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+    width: 80%;
+    overflow-y: overlay;
+}
+
+.content_skyblue, .content_green{
+    color: white;
+    display: flex;
+    height: 30%;
+    margin:5px auto;
+    font-family: ClanOffcNews;
+    font-size: 12.5px;
+    justify-content: space-around;
+    width: 80%;
+    text-align: center;
+    line-height: 1.4;
+    flex-wrap: wrap;
+    overflow-y: overlay;
+
+}
+
+
+.content_skyblue::-webkit-scrollbar, .content_green::-webkit-scrollbar {
+	width: 4px;
+}
+
+.content_skyblue::-webkit-scrollbar-thumb, .content_green::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+
+
+.wrapper_yellow, .wrapper_palegreen, .wrapper_purple, .wrapper_skyblue, .wrapper_green{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 489px;
+    height: 370px;
+    margin: auto;
+    flex-direction: column;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.wrapper_yellow{
+    background-color: $yellow;
+}
+
+.wrapper_palegreen{
+    background-color: $pale-green;
+}
+
+.wrapper_purple{
+    background-color: $purple;
+}
+
+.wrapper_skyblue{
+    background-color: $sky-blue;
+}
+
+.wrapper_green{
+    background-color: $green;
+}
+
+.title{
+    color: white;
+    font-family: BreePeru;
+    font-size: 26px;
+    font-weight: bold;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.img{
+    height: 25%;
+    width: 91px;
+}
+
+@include respond-to('xs') {
+    .wrapper_yellow, .wrapper_palegreen, .wrapper_purple, .wrapper_skyblue, .wrapper_green{
+        max-width: 300px;
+        height: 430px;
+    } 
+}
+

@@ -17,7 +17,7 @@ const Breadcrumbs = ({content, slug}) => {
 }
 
 Breadcrumbs.defaultProps = {
-    content: 'Link'
+    content: 'some'
 };
 
 export default Breadcrumbs

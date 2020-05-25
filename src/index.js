@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from 'App.jsx';
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
+import Scroll from 'Scroll'
 
-ReactDOM.render( <BrowserRouter><App /></BrowserRouter> , document.getElementById('root'))
+ReactDOM.render( <HashRouter><Scroll/><App/></HashRouter> , document.getElementById('root'))

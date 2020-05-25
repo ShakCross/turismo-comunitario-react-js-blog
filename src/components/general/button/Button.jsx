@@ -1,76 +1,64 @@
 import React from 'react'
 import styles from './button.module.scss'
 
-const Button = ({ title, green, yellow, darkyellow, purple, skyblue, palegreen, xclassname, url, anchor, click }) => {
+const Button = ({ title, action, yellow, skyblue, palegreen, purple, green, xclassname, url, click }) => {
     return (
         <div className={styles.container_button}>
-            {anchor ?
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                    <button
-                        className={ 
-                        yellow ?
-                            `${styles.wrapper_yellow} 
-                            ${styles[xclassname]}`:
-                        darkyellow ?
-                            `${styles.wrapper_darkyellow} 
-                            ${styles[xclassname]}` :
-                        skyblue ? 
-                            `${styles.wrapper_skyblue} 
-                            ${styles[xclassname]}`:
-                        palegreen ? 
-                            `${styles.wrapper_palegreen} 
-                            ${styles[xclassname]}`:
-                        purple ?
-                            `${styles.wrapper_purple} 
-                            ${styles[xclassname]}` :
-                        green ?
-                            `${styles.wrapper_green} 
-                            ${styles[xclassname]}`:
-                        `${styles.wrapper} 
-                        ${styles[xclassname]}`}
-                    >
-                        {title}
-                    </button>
-                </a> :
+            {action ?
                 <button
                     onClick={click}
-                    className={ 
-                        yellow ?
-                            `${styles.wrapper_yellow} 
-                            ${styles[xclassname]}`:
-                        darkyellow ?
-                            `${styles.wrapper_darkyellow} 
-                            ${styles[xclassname]}` :
-                        skyblue ? 
-                            `${styles.wrapper_skyblue} 
-                            ${styles[xclassname]}`:
-                        palegreen ? 
-                            `${styles.wrapper_palegreen} 
-                            ${styles[xclassname]}`:
-                        purple ?
-                            `${styles.wrapper_purple} 
-                            ${styles[xclassname]}` :
-                        green ?
-                            `${styles.wrapper_green} 
-                            ${styles[xclassname]}`:
-                        `${styles.wrapper} 
-                        ${styles[xclassname]}`}
+                    className={
+                    yellow ?
+                        `${styles.wrapper_yellow} 
+                        ${styles[xclassname]}`:
+                    skyblue ? 
+                        `${styles.wrapper_skyblue} 
+                        ${styles[xclassname]}`:
+                    palegreen ? 
+                        `${styles.wrapper_palegreen} 
+                        ${styles[xclassname]}`:
+                    purple ?
+                        `${styles.wrapper_purple} 
+                        ${styles[xclassname]}` :
+                    green ?
+                        `${styles.wrapper_green} 
+                        ${styles[xclassname]}`:
+                    `${styles.wrapper} 
+                    ${styles[xclassname]}`
+                    }
+                    
                 >
-                    {title}
-                </button>
+                    <h3 className={styles.h3}>
+                        {title}
+                    </h3>
+                </button> : 
+                <a href={url} rel="noopener noreferrer">
+                    <button
+                        onClick={click}
+                        className={styles.wrapper_round}
+                    >
+                        <h3 className={styles.h3}>
+                            {title}
+                        </h3>
+                    </button>
+                </a>
             }
+
         </div>
     )
 }
 
 Button.defaultProps = {
-    title: 'Más Información',
-    green: false,
-    yellow: false,
-    darkyellow: false,
+    title: 'Ver más experiencias',
+    yellow: false, 
+    skyblue: false,
+    palegreen: false,
     purple: false,
-    xclassname: 'null',
-    url: '#'
+    green: false,
+    action: false,
+    url: '',
+    xclassname: '',
+    click: null
 };
 
 export default Button

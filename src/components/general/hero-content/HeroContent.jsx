@@ -1,22 +1,67 @@
-import React from 'react'
+import React from "react";
 import styles from './hero-content.module.scss'
-import Chip from 'components/general/chip/Chip'
-import Button from 'components/general/button/Button'
-import H1 from 'components/general/h1/H1'
+import Breadcrumbs from 'components/general/breadcrumbs/Breadcrumbs'
+import Chip from "components/general/chip/Chip";
 
-const HeroContent = ({desc, title, chip, url, to}) => {
+
+const HeroContent = ({ title, desc, responsive, image, image_lg, image_sm, breadcrumbs, content, slug, logo, location, chip }) => {
+
     return (
-        <a className={styles.heading__wrapper} href={to}>
-            <div className={styles.heading__inner_wrapper}>
-                <Chip filled title={chip}/>
-                <H1 title={title} />
-                <span className={styles.span}>
-                    {desc}
-                </span>
-                <Button title="Más Información" xclassname="slider_button" url={url}/>
+        <div>
+            <div className={styles.wrapper}>
+                <div className={styles.heading__wrapper}>
+                    <div className={styles.heading__inner_wrapper}>
+                        {
+                            chip ? <Chip location={location} />
+                            :''
+                        }
+                        <h1 className={styles.h1} >
+                            {title}
+                        </h1>
+                        <h2 className={styles.span}>
+                            {desc}
+                        </h2>
+                        {
+                            breadcrumbs ?
+                                <>
+                                    <Breadcrumbs content={content} slug={slug} />
+                                    <div className={styles.logo_wrapper}>
+                                        <img className={styles.logo} src={logo} alt="" srcSet="" />
+                                    </div>
+                                </>
+                                : <div className={styles.logo_wrapper}>
+                                    <img className={styles.logo} src={logo} alt="" srcSet="" />
+                                </div>
+
+                        }
+                    </div>
+                </div>
+                {responsive ?
+                    <>
+                        <img className={styles.slides_lg} src={image_lg} alt="" />
+                        <img className={styles.slides_sm} src={image_sm} alt="" />
+                    </>
+                    :
+                    <img className={styles.slides} src={image} alt="" />
+                }
             </div>
-        </a>
+        </div>
     )
 }
+
+HeroContent.defaultProps = {
+    title: 'Turismo Comunitario',
+    desc: 'Un Perú no solo debes conocerlo sino también vivirlo, recorriendo paisajes naturales que son capaces de hablar por si solos',
+    responsive: false,
+    image: '',
+    image_lg: '',
+    image_sm: '',
+    breadcrumbs: false,
+    content: '',
+    slug: '',
+    logo: '',
+    chip: false
+
+};
 
 export default HeroContent

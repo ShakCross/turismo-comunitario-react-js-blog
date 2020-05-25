@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './footer.module.scss';
 import { faFacebookF, faWhatsapp, faTwitter, faInstagram, faYoutube, faSpotify } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import iperu from 'assets/img/iperu.webp'
-import promperu from 'assets/img/promperu.webp'
-import marcaperu from 'assets/img/perumarca.webp'
-// import SubscribeInput from 'components/footer/subscribe-input/SubscribeInput'
+import iperu from 'assets/img/iperu.png'
+import promperu from 'assets/img/promperu.png'
+import marcaperu from 'assets/img/perumarca.png'
+import SubscribeInput from 'components/footer/subscribe-input/SubscribeInput'
 import H5 from 'components/general/h5/H5';
 import SocialICon from 'components/footer/social-icon/SocialIcon'
 import SubFooter from 'components/footer/subfooter/SubFooter';
@@ -37,9 +37,9 @@ const Footer = () => {
                                 <H5 title="Información para tu viaje" />
                             </div>
                             <ul className={styles.list}>
-                                <a className={styles.list__link} target="_blank" rel="noopener noreferrer" href="http://export.promperu.gob.pe/emailing/2019/feb/pdf/feriados_2019.pdf"><li>Lista de Feriados</li></a>
-                                <a className={styles.list__link} target="_blank" rel="noopener noreferrer" href="https://www.senamhi.gob.pe/"><li>Clima y Pronóstico del Tiempo</li></a>
-                                <a className={styles.list__link} target="_blank" rel="noopener noreferrer" href="http://www.sernanp.gob.pe/"><li>Áreas Naturales Protegidas</li></a>
+                                <a className={styles.list__link} target="_blank" rel="noopener noreferrer" href="http://export.promperu.gob.pe/emailing/2019/feb/pdf/feriados_2019.pdf"><h5 className={styles.h5}>Lista de Feriados</h5></a>
+                                <a className={styles.list__link} target="_blank" rel="noopener noreferrer" href="https://www.senamhi.gob.pe/"><h5 className={styles.h5}>Clima y Pronóstico del Tiempo</h5></a>
+                                <a className={styles.list__link} target="_blank" rel="noopener noreferrer" href="http://www.sernanp.gob.pe/"><h5 className={styles.h5}>Áreas Naturales Protegidas</h5></a>
                             </ul>
                         </div>
                     </div>
@@ -71,13 +71,13 @@ const Footer = () => {
                                 <div className={styles.wrapper__perulogos__mobile}>
                                     <div className={styles.inner_wrapper__perulogos}>
                                         <div>
-                                            <img className={styles.perulogos} src={iperu} alt="iperu-logo" />
+                                            <img className={styles.perulogos} src={iperu} alt="" />
                                         </div>
                                         <div>
-                                            <img className={styles.perulogos} src={promperu} alt="promperu-logo" />
+                                            <img className={styles.perulogos} src={promperu} alt="" />
                                         </div>
                                         <div>
-                                            <img className={styles.perulogos} src={marcaperu} alt="marca-peru-logo" />
+                                            <img className={styles.perulogos} src={marcaperu} alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -92,18 +92,18 @@ const Footer = () => {
                             </div>
                             {/* <SubscribeInput /> */}
                             <div className={styles.sub_button}>
-                                <Button xclassname="footer_wrapper" purple title="Suscríbete" url="https://www.ytuqueplanes.com/suscribete.aspx"/>
+                                <Button title="Suscríbete" url="https://www.ytuqueplanes.com/suscribete.aspx"/>
                             </div>
                             <div className={styles.wrapper__perulogos}>
                                 <div className={styles.inner_wrapper__perulogos}>
                                     <div>
-                                        <img className={styles.perulogos} src={iperu} alt="iperu-logo" />
+                                        <img className={styles.perulogos} src={iperu} alt="" />
                                     </div>
                                     <div>
-                                        <img className={styles.perulogos} src={promperu} alt="promperu-logo" />
+                                        <img className={styles.perulogos} src={promperu} alt="" />
                                     </div>
                                     <div>
-                                        <img className={styles.perulogos} src={marcaperu} alt="marca-peru-logo" />
+                                        <img className={styles.perulogos} src={marcaperu} alt="" />
                                     </div>
                                 </div>
                             </div>

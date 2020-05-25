@@ -1,4 +1,4 @@
- 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
 
 /* Global styles
@@ -76,6 +76,7 @@ p {
 a {
     display: inline-block;
     text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -116,26 +117,26 @@ img {
 
  @media only screen and (max-width: 400px) {
     div.card-slider-module__show_slider___3TSxR > div.slick-slider.slick-initialized > div.slick-list > div.slick-track > div.slick-slide > div{
-        margin-left: -330px !important;
+         padding-left: 280px !important;
      }
  }
 
  @media only screen and (max-width: 370px) {
     div.card-slider-module__show_slider___3TSxR > div.slick-slider.slick-initialized > div.slick-list > div.slick-track > div.slick-slide > div{
-        margin-left: -315px !important;
+         padding-left: 252px !important;
      }
  }
 
  @media only screen and (max-width: 343px) {
     div.card-slider-module__show_slider___3TSxR > div.slick-slider.slick-initialized > div.slick-list > div.slick-track > div.slick-slide > div{
-        margin-left: -300px !important;
+         padding-left: 265px !important;
      }
  }
 
  @media only screen and (max-width: 330px) {
     div.card-slider-module__show_slider___3TSxR > div.slick-slider.slick-initialized > div.slick-list > div.slick-track > div.slick-slide > div{
-        margin-left: -290px !important;
+         padding-left: 219px !important;
      }
  }
-
+ 
  
